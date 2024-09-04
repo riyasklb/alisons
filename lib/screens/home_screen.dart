@@ -69,13 +69,16 @@ print('----------6----------');
 
   Widget _buildProductList(Getproduct data) {
     return ListView.builder(
-      itemCount: data.featuredbrands.length,
+      itemCount: data.banner2.length,
       itemBuilder: (context, index) {
-        var product = data.featuredbrands[index];
+        var product = data.banner2[index];
+      //  https://swan.alisonsnewdemo.online/images/product/1696583677A53FAWzwjfJ0WhmpRtWP7T4znCiZENZf0b5JQUXw.webp
+      // https://swan.alisonsnewdemo.online/images/category/1695626477.jpg
+    //  https://swan.alisonsnewdemo.online/images/banner/1695716382_1_sH4k9mEPpOeGBInBvUUc9G2X3tXUhPE41ZH3Vp5B.webp
         return ListTile(
-          leading:CircleAvatar(backgroundImage: NetworkImage(product.image),),
-          title: Text(product.name),
-          subtitle: Text('Price: ${product.slug}'),
+          leading:CircleAvatar(backgroundImage: NetworkImage('https://swan.alisonsnewdemo.online/images/banner/${product.image}'),),
+          title: Text(product.title),
+        //  subtitle: Text('Price: ${product.}'),
         );
       },
     );
